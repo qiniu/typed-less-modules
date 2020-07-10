@@ -1,0 +1,26 @@
+if: tag IS blank
+
+language: node_js
+node_js:
+  - "10"
+
+jobs:
+  include:
+    - stage: test
+      name: "Unit tests, type checking, linting, etc."
+      script:
+        - yarn check-types
+        - yarn test
+        - yarn codecov
+        - git reset --hard HEAD
+        - yarn check-formatting
+        - yarn build
+        - yarn commitlint-travis
+    - stage: release
+      name: "Release on npm"
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          # TODO: !!! @nighca
+          # - yarn semantic-release
