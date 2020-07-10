@@ -16,11 +16,11 @@ jobs:
         - yarn check-formatting
         - yarn build
         - yarn commitlint-travis
-    - stage: release
-      name: "Release on npm"
-      deploy:
-        provider: script
-        skip_cleanup: true
-        script:
-          # TODO: !!! @nighca
+    # TODO: !!! @nighca
+    # - stage: release
+    #   name: "Release on npm"
+    #   deploy:
+    #     provider: script
+    #     skip_cleanup: true
+    #     script:
           # - yarn semantic-release
