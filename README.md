@@ -1,6 +1,6 @@
 # 🎁 typed-less-modules
 
-[![Travis Build Status](https://img.shields.io/travis/qiniu/typed-less-modules/master?style=for-the-badge)](https://travis-ci.com/qiniu/typed-less-modules)
+[![Travis Build Status](https://img.shields.io/travis/com/qiniu/typed-less-modules/master?style=for-the-badge)](https://travis-ci.com/qiniu/typed-less-modules)
 [![Codecov](https://img.shields.io/codecov/c/github/qiniu/typed-less-modules?style=for-the-badge)](https://codecov.io/gh/qiniu/typed-less-modules)
 [![npm](https://img.shields.io/npm/v/@qiniu/typed-less-modules?color=%23c7343a&label=npm&style=for-the-badge)](https://www.npmjs.com/package/@qiniu/typed-less-modules)
 [![GitHub stars](https://img.shields.io/github/stars/qiniu/typed-less-modules.svg?style=for-the-badge)](https://github.com/qiniu/typed-less-modules/stargazers)
