@@ -22,4 +22,5 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
-          - yarn semantic-release
+          # TODO: !!! @nighca
+          # - yarn semantic-release
