@@ -1,0 +1,16 @@
+codecov:
+  bot: "codecov"
+  ci:
+    - "travis.org"
+  require_ci_to_pass: yes
+
+coverage:
+  status:
+    patch: off
+    project: off
+
+comment:
+  layout: "reach, diff, flags, files"
+  behavior: default
+  branches:
+    - "master"

@@ -11,6 +11,7 @@ jobs:
       script:
         - yarn check-types
         - yarn test
+        - yarn codecov
         - git reset --hard HEAD
         - yarn check-formatting
         - yarn build

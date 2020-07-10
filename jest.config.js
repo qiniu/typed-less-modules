@@ -6,5 +6,9 @@ module.exports = {
     "<rootDir>/dist/",
     "<rootDir>/node_modules/",
     "(.*).d.ts"
-  ]
+  ],
+  collectCoverage: true,
+  collectCoverageFrom: ["lib/**/*.(ts|tsx)", "!**/node_modules/**"],
+  coverageDirectory: "__coverage__",
+  coverageReporters: ["json", "lcov", "text", "cobertura"]
 };

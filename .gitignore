@@ -2,3 +2,7 @@ node_modules
 *.log
 *.rej
 dist
+
+# Test Relative Folders
+__mocks__
+__coverage__

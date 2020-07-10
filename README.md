@@ -1,13 +1,10 @@
 # 🎁 typed-less-modules
 
-[![GitHub stars](https://img.shields.io/github/stars/qiniu/typed-less-modules.svg?style=for-the-badge)](https://github.com/qiniu/typed-less-modules/stargazers)
-
+[![Travis Build Status](https://img.shields.io/travis/qiniu/typed-less-modules/master?style=for-the-badge)](https://travis-ci.com/qiniu/typed-less-modules)
+[![Codecov](https://img.shields.io/codecov/c/github/qiniu/typed-less-modules?style=for-the-badge)](https://codecov.io/gh/qiniu/typed-less-modules)
 [![npm](https://img.shields.io/npm/v/@qiniu/typed-less-modules?color=%23c7343a&label=npm&style=for-the-badge)](https://www.npmjs.com/package/@qiniu/typed-less-modules)
-
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/qiniu/typed-less-modules/blob/master/LICENSE)
-
-[![Build Status](https://travis-ci.com/qiniu/typed-less-modules.svg?branch=master)](https://travis-ci.com/qiniu/typed-less-modules)
-[![npm version](https://img.shields.io/npm/v/typed-less-modules.svg?style=flat)](https://www.npmjs.com/package/typed-less-modules)
+[![GitHub stars](https://img.shields.io/github/stars/qiniu/typed-less-modules.svg?style=for-the-badge)](https://github.com/qiniu/typed-less-modules/stargazers)
+[![license](https://img.shields.io/github/license/qiniu/typed-less-modules?style=for-the-badge)](https://github.com/qiniu/typed-less-modules/blob/master/LICENSE)
 
 Generate TypeScript definitions (`.d.ts`) files for CSS Modules that are written in LESS (`.less`).
 
@@ -245,16 +242,25 @@ const path = require("path");
 module.exports = {
   pattern: "./src/**/*.m.less",
   watch: true,
+  // ...
+  // 上述所有配置均可用
   aliases: {
+    // 映射至多路径
     "~": [
       path.resolve(__dirname, "node_modules"),
       path.resolve(__dirname, "src")
-    ]
+    ],
+    // 映射至单路径
+    "@": path.resolve(__dirname, "some-dir"),
+    // 自定义映射规则
+    "abc-module"(filePath) {
+      return filePath.replace("abc-module", "xxx-path");
+    }
   },
+  // less.render options 参数
   lessRenderOptions: {
     javascriptEnabled: true
   }
-  // ...
 };
 ```
 
