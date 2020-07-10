@@ -51,7 +51,7 @@ tlm src
 Or, install and run as a `devDependency`:
 
 ```bash
-yarn add -D typed-less-modules less
+yarn add -D typed-less-modules
 yarn tlm src
 ```
 
