@@ -27,7 +27,8 @@
     "format": "prettier --write '**/*.{js,json,css,md,less,tsx,ts}'",
     "check-formatting": "prettier --check '**/*.{js,json,css,md,less,tsx,ts}'",
     "codecov": "codecov",
-    "commit": "commit"
+    "commit": "commit",
+    "ci": "yarn check-types && yarn test"
   },
   "files": [
     "dist/lib"
