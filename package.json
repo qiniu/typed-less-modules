@@ -28,7 +28,7 @@
     "check-formatting": "prettier --check '**/*.{js,json,css,md,less,tsx,ts}'",
     "codecov": "codecov",
     "commit": "commit",
-    "ci": "yarn check-types && yarn test"
+    "ci": "yarn check-types && yarn check-formatting && yarn test"
   },
   "files": [
     "dist/lib"
