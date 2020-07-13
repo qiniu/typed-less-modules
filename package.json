@@ -1,6 +1,6 @@
 {
   "name": "@qiniu/typed-less-modules",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "TypeScript type definition generator for LESS CSS Modules",
   "main": "index.js",
   "license": "Apache",
