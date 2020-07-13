@@ -11,6 +11,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12
+        registry-url: https://registry.npmjs.org/
     - name: Install dependencies
       run: yarn
     - name: Publish to npm
