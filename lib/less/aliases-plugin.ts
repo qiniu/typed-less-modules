@@ -75,6 +75,9 @@ export class LessAliasesPlugin {
         }
       }
 
+      if (!isHited) {
+        return filename;
+      }
       if (isHited && !resolvedPath) {
         throw new Error(`Invalid @import: ${filename}`);
       }
