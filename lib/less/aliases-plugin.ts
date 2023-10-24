@@ -26,6 +26,10 @@ export class LessAliasesPlugin {
     const { aliases = {} } = this;
 
     function resolve(filename: string) {
+      // 根路径直接返回
+      if(filename[0] === '/') {
+          return filename;
+      }
       // 从长到短排序可以有效避免 `a` 和 `ab` 别名冲突的问题
       const aliasNames = Object.keys(aliases).sort(
         (a, b) => b.length - a.length
